@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Web", "Blogroll.Web\Blogroll.Web.csproj", "{39233356-0A13-45AD-9515-16EB238020A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Common", "Blogroll.Common\Blogroll.Common.csproj", "{35E6E569-FA9B-4406-97E5-5750EE189A3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogroll.Tests", "Blogroll.Tests\Blogroll.Tests.csproj", "{96B5E6BB-4683-4A15-8B7B-292BB45A629C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Web.Common", "Blogroll.Web.Common\Blogroll.Web.Common.csproj", "{147A4B2B-E7B6-487D-ACB2-338C39522E5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Persistence.LiteDB", "Blogroll.Persistence.LiteDB\Blogroll.Persistence.LiteDB.csproj", "{E0D3C2BD-F746-4AD8-B089-356C286909A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Persistence.SQLite", "Blogroll.Persistence.SQLite\Blogroll.Persistence.SQLite.csproj", "{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C837EB13-EC20-4DF4-AF56-E93FD0FAEB3F}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.hgignore = .hgignore
+		Dockerfile = Dockerfile
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39233356-0A13-45AD-9515-16EB238020A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39233356-0A13-45AD-9515-16EB238020A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39233356-0A13-45AD-9515-16EB238020A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39233356-0A13-45AD-9515-16EB238020A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35E6E569-FA9B-4406-97E5-5750EE189A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35E6E569-FA9B-4406-97E5-5750EE189A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35E6E569-FA9B-4406-97E5-5750EE189A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35E6E569-FA9B-4406-97E5-5750EE189A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147A4B2B-E7B6-487D-ACB2-338C39522E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147A4B2B-E7B6-487D-ACB2-338C39522E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147A4B2B-E7B6-487D-ACB2-338C39522E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147A4B2B-E7B6-487D-ACB2-338C39522E5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D3C2BD-F746-4AD8-B089-356C286909A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D3C2BD-F746-4AD8-B089-356C286909A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D3C2BD-F746-4AD8-B089-356C286909A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D3C2BD-F746-4AD8-B089-356C286909A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CB38BBC-5FCD-4996-A810-64957B4DED7D}
+	EndGlobalSection
+EndGlobal

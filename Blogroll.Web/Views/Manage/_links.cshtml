@@ -1,0 +1,101 @@
+﻿@model Blogroll.Web.Models.ViewModel
+
+<ul>
+    @Html.Raw(await Model.Links())
+</ul>
+<script>
+  (function() {
+    var dragSrcEl = null;
+    function allLinks() {
+      return document.querySelectorAll('li.link');
+    }
+
+    function doPreventDefault(e) {
+        if (e.preventDefault) {
+          e.preventDefault(); // Necessary. Allows us to drop.
+        }
+    }
+
+    function onDragStart(e) {
+        // Target (this) element is the source node.
+        this.classList.add("dragged");
+        dragSrcEl = this;
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/html', this.innerHTML);
+    }
+
+    function onDragOver(e) {
+        doPreventDefault(e); // Necessary. Allows us to drop.
+        e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+        return false;
+    }
+
+    function onDragEnter(e) {
+        // this / e.target is the current hover target.
+        this.classList.add('over');
+    }
+
+    function onDragLeave(e) {
+        this.classList.remove('over');  // this / e.target is previous target element.
+    }
+
+    function onDroppedLink(e) {
+        // this/e.target is current target element.
+        doPreventDefault(e); // should stop the link navigation
+        if (e.stopPropagation) {
+            e.stopPropagation(); // Stops some browsers from redirecting.
+        }
+        dragSrcEl.classList.remove("dragged");
+        // Don't do anything if dropping the same column we're dragging.
+        if (dragSrcEl !== this) {
+            const [from, to] = oldAndNewPositions(this, dragSrcEl);
+            repositionLink(from, to);
+        }
+        return false;
+    }
+
+    function oldAndNewPositions(e, draggedEl) {
+        e.insertAdjacentElement("afterend", draggedEl);
+        const oldPosition = draggedEl.querySelector("a").href.split("/").pop();
+        const newPosition = [].map.call(allLinks(), e => e).indexOf(draggedEl) + 1;
+        return [oldPosition, newPosition];
+    }
+
+    function repositionLink(from, to) {
+        const request = new XMLHttpRequest();
+        request.open('POST', `/api/v1/link/move/${from}/${to}`, true);
+        request.onload = function onLoad() {
+            if (request.status > 399) {
+                console.log(`Repositioning failed with status ${request.status}`);
+            }
+        };
+        request.onerror = function onError(err) {
+            // There was a connection error of some sort
+            console.log(`Connection error: ${err}`);
+        };
+        request.send();
+    }
+
+    function onDragEnd(e) {
+        // this/e.target is the source node.
+        [].forEach.call(allLinks(), function (col) {
+            col.classList.remove('over');
+        });
+    }
+
+    function bindDragDropEvents(link) {
+        link.addEventListener('dragstart', onDragStart, false);
+        link.addEventListener('dragenter', onDragEnter, false);
+        link.addEventListener('dragover', onDragOver, false);
+        link.addEventListener('dragleave', onDragLeave, false);
+        link.addEventListener('dragend', onDragEnd, false);
+        link.addEventListener('drop', onDroppedLink, false);
+    }
+
+    function setupDragDrop() {
+        [].forEach.call(allLinks(), bindDragDropEvents);
+    }
+
+    setupDragDrop();
+  })();
+</script>

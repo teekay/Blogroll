@@ -1,0 +1,35 @@
+﻿@model Blogroll.Web.Models.ViewModel
+
+<h2>Edit a blog</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Home" asp-action="Update">
+            @Html.Raw(Model.Form("Views/Manage/_form.hbs"))
+            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-warning"
+                    data-toggle="modal" data-target="#confirmRemoveModal">Remove</button>
+        </form>
+    </div>
+    <div class="modal fade" id="confirmRemoveModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Confirm to remove this link</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you really want to remove this link, or did you click this by mistake?</p>
+                </div>
+                <div class="modal-footer">
+                    <form asp-controller="Home" asp-action="Remove" asp-route-id="@Model.Id()" method="post">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Really remove</button>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="col-md-6">
+        <partial name="~/Views/Manage/_links.cshtml" />
+    </div>
+</div>
