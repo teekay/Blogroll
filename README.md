@@ -10,6 +10,20 @@ ASP.NET Core 2.1 using either SQLite or LiteDB for data storage. Host it on Wind
 
 MIT. Do what you want with this and do not sue me if it does not work.
 
+## Installation
+### Docker
+Review the Dockerfile and customize as necessary. Then deploy to your favorite cloud provider. For my own blog, I am using Azure with a Linux host.
+
+### VPS
+Publish the project "Blogroll.Web", which contains the web app. I strongly suggest putting the Kestrel behind a proxy such as `nginx`. Then, you'd
+want to obtain a SSL certificate, configure your web server accordingly. By default, the app does not require or care about SSL but you do.
+
+## Configuration
+There are three environment variables you want to set:
+- `Auth_Admin__Password` to be set with a password you'll use to manage your links (no username)
+- `Data_Data__Engine` to be set with either `sqlite` or `litedb` (case-insensitive)
+- `Data_Data__Storage` to be set with the relative or absolute path to an existing folder where the app will store the database file.
+
 ## For developers and technical audience
 This is my attempt to examine how to write truly object-oriented code with C#. The source of my inspiration were talks and books by [Yegor Bugayenko](<https://www.yegor256.com/>) - "Elegant objects".
 
