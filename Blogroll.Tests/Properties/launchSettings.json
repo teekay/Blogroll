@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:61673",
-      "sslPort": 44378
+      "applicationUrl": "http://localhost:51383/",
+      "sslPort": 44398
     }
   },
   "profiles": {
@@ -15,23 +15,13 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Blogroll": {
+    "Blogroll.Tests": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:5000;https://localhost:5001"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production"
-      },
-      "httpPort": 61674,
-      "useSSL": true,
-      "sslPort": 44379
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
     }
   }
 }

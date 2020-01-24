@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Web", "Blogroll.We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Common", "Blogroll.Common\Blogroll.Common.csproj", "{35E6E569-FA9B-4406-97E5-5750EE189A3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogroll.Tests", "Blogroll.Tests\Blogroll.Tests.csproj", "{96B5E6BB-4683-4A15-8B7B-292BB45A629C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Web.Common", "Blogroll.Web.Common\Blogroll.Web.Common.csproj", "{147A4B2B-E7B6-487D-ACB2-338C39522E5C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Persistence.LiteDB", "Blogroll.Persistence.LiteDB\Blogroll.Persistence.LiteDB.csproj", "{E0D3C2BD-F746-4AD8-B089-356C286909A2}"
@@ -24,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Tests", "Blogroll.Tests\Blogroll.Tests.csproj", "{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,10 +38,6 @@ Global
 		{35E6E569-FA9B-4406-97E5-5750EE189A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35E6E569-FA9B-4406-97E5-5750EE189A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35E6E569-FA9B-4406-97E5-5750EE189A3C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96B5E6BB-4683-4A15-8B7B-292BB45A629C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{147A4B2B-E7B6-487D-ACB2-338C39522E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{147A4B2B-E7B6-487D-ACB2-338C39522E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{147A4B2B-E7B6-487D-ACB2-338C39522E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,6 +50,10 @@ Global
 		{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{522CFF6A-C2B4-49A8-93EE-6F8980D9C1D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

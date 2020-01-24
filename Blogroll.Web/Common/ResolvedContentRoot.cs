@@ -4,12 +4,12 @@ namespace Blogroll.Web.Common
 {
     public sealed class ResolvedContentRoot
     {
-        public ResolvedContentRoot(IHostingEnvironment env)
+        public ResolvedContentRoot(IWebHostEnvironment env)
         {
             _env = env;
         }
 
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
 
         public string ContentRoot() => _env.ContentRootPath;
 

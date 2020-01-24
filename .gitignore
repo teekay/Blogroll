@@ -237,3 +237,4 @@ _Pvt_Extensions
 .hgignore
 Blogroll.Web/appsettings.Development.json
 Blogroll.Web/Data/
+/MigrationBackup/401edd4f/Blogroll.Tests
