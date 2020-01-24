@@ -4,7 +4,7 @@
 Running a self-published blog on a platform that does not have a blogroll component? You can run this web app to administer your links, then import them to your weblog as an HTML snippet. Or, if you are feeling fancy, import them as JSON then present them in whichever way you'd like.
 
 ## Platform
-ASP.NET Core 2.1 using either SQLite or LiteDB for data storage. Host it on Windows, Linux, in the cloud or in a Docker container.
+ASP.NET Core 3.1 using either SQLite or LiteDB for data storage. Host it on Windows, Linux, in the cloud or in a Docker container.
 
 ## License
 
