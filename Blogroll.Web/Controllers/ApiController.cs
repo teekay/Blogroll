@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Blogroll.Common.Persistence;
 using Blogroll.Web.Common;
 using Blogroll.Web.Common.BlogRollPrinters;
+using Blogroll.Web.Common.Common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -73,12 +74,14 @@ namespace Blogroll.Web.Controllers
             string.IsNullOrEmpty(ct.ContentType()) || ct.ContentType().Contains("json")
                 ? await _blogroll.PrintedTo(new PrintsToJson(withSnippet))
                 : ct.ContentType().Contains("html")
-                    ? await _blogroll.PrintedTo(new PrintsToHtml(System.IO.File.ReadAllText($"{_contentRoot}/Views/Public/_blogroll.hbs"),
+                    ? await _blogroll.PrintedTo(
+                        new PrintsToHtml(System.IO.File.ReadAllText($"{_contentRoot}/Views/Public/_blogroll.hbs"),
                         System.IO.File.ReadAllText($"{_contentRoot}/Views/Public/_link_container.hbs"),
                         System.IO.File.ReadAllText($"{_contentRoot}/Views/Public/_link.hbs"),
                         System.IO.File.ReadAllText($"{_contentRoot}/Views/Public/_snippet.hbs"),
                         "\n", withSnippet))
-                    : await _blogroll.PrintedTo(new PrintsToText(
+                    : await _blogroll.PrintedTo(
+                        new PrintsToText(
                         "{{Links}}", "{{Link}}", 
                         System.IO.File.ReadAllText($"{_contentRoot}/Views/Public/_link.txt"), 
                         string.Empty, "\n"));

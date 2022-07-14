@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Blogroll.Web.Common
+namespace Blogroll.Web.Common.Common
 {
     /// <summary>
     /// Helps to decided the content type requested by the (Http) client.
     /// </summary>
-    internal sealed class ResolvedContentType
+    public sealed class ResolvedContentType
     {
         public ResolvedContentType(Dictionary<string, string> extToContentType, 
             string defaultContentTypeOut,

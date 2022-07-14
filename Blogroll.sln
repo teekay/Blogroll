@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Web", "Blogroll.Web\Blogroll.Web.csproj", "{39233356-0A13-45AD-9515-16EB238020A5}"
 EndProject
@@ -23,6 +23,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Tests", "Blogroll.Tests\Blogroll.Tests.csproj", "{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogroll.Api", "Blogroll.Api\Blogroll.Api.csproj", "{17593B5A-2B90-470B-B4DD-D44FDABE7CB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogroll.Persistence.CosmosDB", "Blogroll.Persistence.CosmosDB\Blogroll.Persistence.CosmosDB.csproj", "{FF46D700-6057-4E1A-9344-1CBF8DA0CE6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogroll.Persistence.AzureTables", "Blogroll.Persistence.AzureTables\Blogroll.Persistence.AzureTables.csproj", "{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +60,18 @@ Global
 		{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3AC8A88-D34B-4A4F-BC08-F00052829CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17593B5A-2B90-470B-B4DD-D44FDABE7CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17593B5A-2B90-470B-B4DD-D44FDABE7CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17593B5A-2B90-470B-B4DD-D44FDABE7CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17593B5A-2B90-470B-B4DD-D44FDABE7CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF46D700-6057-4E1A-9344-1CBF8DA0CE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF46D700-6057-4E1A-9344-1CBF8DA0CE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF46D700-6057-4E1A-9344-1CBF8DA0CE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF46D700-6057-4E1A-9344-1CBF8DA0CE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
