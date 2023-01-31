@@ -19,8 +19,7 @@ namespace Blogroll.Web
                     // Call AddEnvironmentVariables last if you need to allow
                     // environment variables to override values from other 
                     // providers.
-                    config.AddEnvironmentVariables(prefix: "Auth_");
-                    config.AddEnvironmentVariables(prefix: "Data_");
+                    config.AddEnvironmentVariables();
                 }).UseStartup<Startup>();
     }
 }
