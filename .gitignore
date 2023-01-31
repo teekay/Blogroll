@@ -238,3 +238,6 @@ _Pvt_Extensions
 Blogroll.Web/appsettings.Development.json
 Blogroll.Web/Data/
 /MigrationBackup/401edd4f/Blogroll.Tests
+
+# Local development properties of the API app
+Blogroll.Api/Properties

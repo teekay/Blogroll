@@ -1,4 +1,4 @@
-﻿namespace Blogroll.Web.Common
+﻿namespace Blogroll.Web.Common.Common
 {
     /// <summary>
     /// Contract for rather simple password authentication.
