@@ -47,7 +47,7 @@ namespace Blogroll.Web.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> SignOut()
+        public new async Task<IActionResult> SignOut()
         {
             await HttpContext.SignOutAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme);
