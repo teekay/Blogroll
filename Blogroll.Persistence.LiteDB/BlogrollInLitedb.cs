@@ -58,6 +58,8 @@ namespace Blogroll.Persistence.LiteDB
             Source().PersistTo(new PersistingInLiteDb(Collection(db), this));
         }
 
+        public void Dispose() { }
+
         private class PersistingInLiteDb : IPersisting
         {
             public PersistingInLiteDb(LiteCollection<BsonDocument> collection, BlogrollInLitedb parent)

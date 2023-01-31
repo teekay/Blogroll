@@ -4,6 +4,7 @@ using Blogroll.Common.Links;
 using Blogroll.Common.Persistence;
 using Blogroll.Persistence.AzureTables;
 using Blogroll.Persistence.LiteDB;
+using Blogroll.Persistence.MySQL;
 using Blogroll.Persistence.SQLite;
 using Blogroll.Web.Common;
 using Blogroll.Web.Common.Common;
@@ -11,10 +12,10 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MySql.Data.MySqlClient;
 
 namespace Blogroll.Web
 {
@@ -49,14 +50,14 @@ namespace Blogroll.Web
                 {
                     options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
                 });
+
             var preferredDbStorage = Configuration["Data:Engine"]?.ToLowerInvariant() ?? "sqlite";
             var dataFolder = preferredDbStorage == "sqlite" ? "SQLite" : "LiteDb";
             var maybeStoragePath = Configuration["Data:Storage"] ?? string.Empty;
             var storagePath = Directory.Exists(maybeStoragePath)
                 ? maybeStoragePath
                 : $"{contentRoot}/Data/{dataFolder}";
-            services.AddTransient<IPersistedBlogroll>(x => PersistedBlogroll(preferredDbStorage, storagePath));
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddScoped<IPersistedBlogroll>(x => PersistedBlogroll(preferredDbStorage, storagePath));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,6 +95,7 @@ namespace Blogroll.Web
                     new BlogrollSimple(), $"{storagePath}/blogroll.sqlite", new ReadsFeedWithFeedReader()),
                 "azuretables" => new BlogrollInAzureTables(
                     new TableClient(Configuration["AzureWebJobsStorage"], @"links"), new BlogRoll(), new ReadsFeedWithFeedReader()),
+                "mysql" => new BlogrollInMysql(new BlogrollSimple(), new MySqlConnection(Configuration["MySQLConnectionString"]), new ReadsFeedWithFeedReader()),
                 _ => throw new System.Exception($"Unsupported DB API: {dbApi}")
             };
         }

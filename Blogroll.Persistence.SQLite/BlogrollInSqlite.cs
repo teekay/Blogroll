@@ -67,6 +67,8 @@ namespace Blogroll.Persistence.SQLite
             _source.PersistTo(new PersistingInSqlite(db, this));
         }
 
+        public void Dispose() { }
+
         private BlogRollItem BlogRollItemFromReader(SQLiteDataReader reader) => new BlogRollItem(
             new Link(reader["Name"].ToString(),
                 reader["Url"].ToString(),

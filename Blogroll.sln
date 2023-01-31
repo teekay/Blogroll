@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Persistence.Cosmos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogroll.Persistence.AzureTables", "Blogroll.Persistence.AzureTables\Blogroll.Persistence.AzureTables.csproj", "{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blogroll.Persistence.MySQL", "Blogroll.Persistence.MySQL\Blogroll.Persistence.MySQL.csproj", "{8B1BB3FE-8586-47F5-8A8C-0A0AB275923D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C42C0162-1B78-45B7-AA56-CF75BD4AC8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1BB3FE-8586-47F5-8A8C-0A0AB275923D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1BB3FE-8586-47F5-8A8C-0A0AB275923D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1BB3FE-8586-47F5-8A8C-0A0AB275923D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1BB3FE-8586-47F5-8A8C-0A0AB275923D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

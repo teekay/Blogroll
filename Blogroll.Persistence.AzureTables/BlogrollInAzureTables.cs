@@ -66,6 +66,10 @@ namespace Blogroll.Persistence.AzureTables
 
         public void Save() => Source().PersistTo(new PersistingInAzureTables(_client, this));
 
+        public void Dispose()
+        {
+        }
+
         private class PersistingInAzureTables : IPersisting
         {
             public PersistingInAzureTables(TableClient client, BlogrollInAzureTables parent)

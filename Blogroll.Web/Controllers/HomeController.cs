@@ -34,6 +34,7 @@ namespace Blogroll.Web.Controllers
         public async Task<IActionResult> Add()
         {
             await AddOrUpdateLink(new FindsFeeds());
+            Trace.WriteLine("Added the link");
             return Redirect("/");
         }
 
