@@ -11,6 +11,7 @@ COPY ["Blogroll.Persistence.SQLite/Blogroll.Persistence.SQLite.csproj", "Blogrol
 COPY ["Blogroll.Web.Common/Blogroll.Web.Common.csproj", "Blogroll.Web.Common/"]
 COPY ["Blogroll.Persistence.LiteDB/Blogroll.Persistence.LiteDB.csproj", "Blogroll.Persistence.LiteDB/"]
 COPY ["Blogroll.Persistence.AzureTables/Blogroll.Persistence.AzureTables.csproj", "Blogroll.Persistence.AzureTables/"]
+COPY ["Blogroll.Persistence.MySQL/Blogroll.Persistence.MySQL.csproj", "Blogroll.Persistence.MySQL/"]
 RUN dotnet restore "Blogroll.Web/Blogroll.Web.csproj"
 COPY . .
 WORKDIR "/src/Blogroll.Web"

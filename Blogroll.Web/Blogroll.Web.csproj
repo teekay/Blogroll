@@ -27,6 +27,7 @@
     <ProjectReference Include="..\Blogroll.Common\Blogroll.Common.csproj" />
     <ProjectReference Include="..\Blogroll.Persistence.AzureTables\Blogroll.Persistence.AzureTables.csproj" />
     <ProjectReference Include="..\Blogroll.Persistence.LiteDB\Blogroll.Persistence.LiteDB.csproj" />
+    <ProjectReference Include="..\Blogroll.Persistence.MySQL\Blogroll.Persistence.MySQL.csproj" />
     <ProjectReference Include="..\Blogroll.Persistence.SQLite\Blogroll.Persistence.SQLite.csproj" />
     <ProjectReference Include="..\Blogroll.Web.Common\Blogroll.Web.Common.csproj" />
   </ItemGroup> 
